@@ -8,7 +8,6 @@ nextISSTimesForMyLocation((error, passTimes) => {
     return console.log("It didn't work!", error);
   }
   //success case
-  console.log(passTimes);
   for (const item of passTimes) {
     const date = new Date(item.risetime * 1000);
     console.log(`Next pass at ${date} for ${item.duration} seconds`);
